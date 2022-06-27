@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# css because using less
+*.css
+
 # testing
 /coverage
 
