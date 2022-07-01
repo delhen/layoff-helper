@@ -1,0 +1,78 @@
+@widthInitial: 87.5px;
+@heightInitial: 30px;
+@backgroundColor: #ececf6;
+
+@timeInitial: 35s;
+@initPosition: 400px;
+
+.cloud {
+	width: 87.5px; height: 30px;
+	background: @backgroundColor;
+	
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+.x1{
+	position: absolute;
+	left: 0;
+	top: @initPosition;
+	animation: animateCloud @timeInitial linear infinite;
+	z-index: -1;
+	transform: scale(1.5);
+}
+
+.x2{
+	.x1();
+	top: @initPosition - 150;
+	animation: animateCloud (@timeInitial - 15s) linear infinite;
+	transform: scale(1);
+}
+
+.x3{
+	.x1();
+	top: @initPosition - 250;
+	animation: animateCloud (@timeInitial - 10s) linear infinite;
+	transform: scale(2);
+}
+
+.x4{
+	.x1();
+	top: @initPosition - 75;
+	animation: animateCloud (@timeInitial - 12s) linear infinite;
+	transform: scale(0.8);
+}
+
+.cloud:after, .cloud:before {
+	content: '';
+	position: absolute;
+	background: @backgroundColor;
+}
+
+.cloud:after {
+	width: 25px; height: 25px;
+	top: -10px; left: 15px;
+	
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+.cloud:before {
+	width: 45px; height: 45px;
+	top: -20px; right: 15px;
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+}
+
+// KEYFRAMES
+@keyframes animateCloud {
+	0% {
+			margin-left: -100px;
+	}
+	100% {
+			margin-left: 95%;
+	}
+}
