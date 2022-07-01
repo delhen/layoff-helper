@@ -12,6 +12,12 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  text-align: center;
+
+  @media screen and (max-height: 860px) {
+    overflow-y: scroll;
+    height: auto;
+  }
 }
 
 .image{
@@ -22,4 +28,8 @@
   background: url('/public/assets/cityspace-image3.png') 0 0 repeat-x;
   background-position: bottom;
   background-size: auto;
+
+  @media screen and (max-width: 880px) {
+    z-index: -1;
+  }
 }
