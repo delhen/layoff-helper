@@ -1,8 +1,25 @@
+@import '../../global/layout.module.less';
+@import '../../global/cloud.module.less';
+
+@landingPageBgColor: rgba(223,246,255, 0.5);
+
 .landingPage{
-  background: url('/public/assets/cityspace-image1.png') 0 0 no-repeat;
-  background-position: bottom;
-  background-size: auto;
-  background-repeat: repeat-x;
+  background: @landingPageBgColor;
   height: 100vh;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image{
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  background: url('/public/assets/cityspace-image3.png') 0 0 repeat-x;
+  background-position: bottom;
+  background-size: auto;
 }
