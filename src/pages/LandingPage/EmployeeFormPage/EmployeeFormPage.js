@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import FormGeneric from '../../components/FormGeneric/FormGeneric'
+import FormGeneric from '../../../components/FormGeneric/FormGeneric'
 
 export default class EmployeeFormPage extends Component {
   render() {
     return (
-      <FormGeneric />
+      <FormGeneric for="employee" />
     )
   }
 }
