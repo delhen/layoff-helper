@@ -6,7 +6,7 @@ import Input from '../Input/Input'
 export default class FormGeneric extends Component {
   render() {
     return (
-      <form className="w-full z-10 text-left md:mt-8 mt-4" method='get'>
+      <form className="w-full z-10 text-left md:mt-8 mt-4" method='get' action='/r/success'>
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <Input label="Full Name" placeholder="John Doe" type="text" />
